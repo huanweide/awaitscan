@@ -1,0 +1,28 @@
+{
+  "name": "awaitscan",
+  "version": "1.0.0",
+  "description": "零依赖单文件 Node CLI · 异步性能反模式静态扫描器（循环内串行 await / map 回调内 await / 嵌套循环，严重度加权健康分 + CI 门禁）",
+  "bin": {
+    "awaitscan": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "cli",
+    "performance",
+    "await",
+    "async",
+    "promise-all",
+    "nested-loop",
+    "health",
+    "zero-dependency",
+    "ci",
+    "lint"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  }
+}
