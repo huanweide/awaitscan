@@ -1,5 +1,7 @@
+English: 暂未提供
+
 > [!WARNING]
-> **⚠️ 本轴已并入 [doctors](https://github.com/huanweide/doctors) 家族 monorepo → 本仓停止维护。**
+> **⚠️ 本工具已并入 [doctors](https://github.com/huanweide/doctors) monorepo → 本仓停止维护。**
 >
 > 代码原件已迁至 [`doctors/packages/awaitscan/`](https://github.com/huanweide/doctors/tree/main/packages/awaitscan)，
 > 在 doctors 里以 `doctors await` 子命令调用（或 `node packages/awaitscan/index.js`）。
@@ -8,10 +10,10 @@
 <!-- badges -->
 [![License](https://img.shields.io/github/license/huanweide/awaitscan)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/huanweide/awaitscan)](https://github.com/huanweide/awaitscan/stargazers)
-[![Engineering Health Family](https://img.shields.io/badge/Engineering%20Health%20Family-18%20axes-22c55e)](https://github.com/huanweide/family-showcase)
+[![zero-dep checkup CLI](https://img.shields.io/badge/zero--dep%20checkup%20CLI-18%20tools-22c55e)](https://github.com/huanweide/family-showcase)
 <!-- /badges -->
 
-**🔧 Part of the [Engineering Health Family](https://github.com/huanweide/family-showcase)** (18 zero-dependency checkup axes). Standalone tool — see [doctors](https://github.com/huanweide/doctors) (monorepo) and [enghealth](https://github.com/huanweide/enghealth) (unified runner).
+**🔧 本工具属于 [huanweide 零依赖 CLI 系列](https://github.com/huanweide/family-showcase)（共 18 件单文件工具）。可单独使用，也可在 [doctors](https://github.com/huanweide/doctors) monorepo 中以子命令调用，或用 [enghealth](https://github.com/huanweide/enghealth) 统一运行。**
 
 # awaitscan
 
@@ -118,9 +120,9 @@ awaitscan --root . --max-issues 5
 
 [oxlint](https://github.com/oxc-project/oxlint)（Rust、零配置、700+ 规则）含 `perf` 类别，但它是通用 Linter，不聚焦「串行 await 语义」这一特定高信号切口。`awaitscan` 零依赖单文件、纯 JS 层静态扫描，**确定性可复现**，专门把「循环内串行 await / map 内 await」这一类最容易被忽略、却最影响吞吐的异步反模式做成一把尺子，更适合塞进任何 Node 项目的 CI 做异步性能体检。
 
-## 与 family 的关系
+## 与同系列工具的关系
 
-`awaitscan` 是「代码健康 family」的第五件（性能 / 可维护性切面）：
+`awaitscan` 是 huanweide 零依赖 CLI 系列中负责「异步性能体检」的一件（与下列工具同范式）：
 
 - **devdoctor** — 依赖体检（胖瘦 / 许可证 / 循环依赖 / 明文密钥）
 - **testlite** — 测试卫生体检（框架 / 密度 / 覆盖率）
@@ -144,24 +146,17 @@ MIT © huanweide
 
 ## 作者
 
-由 **ReTr · huanweide** 维护 · [GitHub 主页](https://github.com/huanweide)
+由 **huanweide** 维护 · [GitHub 主页](https://github.com/huanweide)
 
 ## CI 门禁用法
 
 开箱即可接入 CI：在流水线中运行本工具，它会输出健康分与严重度；若存在不达标项会以非 0 退出码结束，从而拦下问题提交（具体参数见上方「快速开始」）。
 
 
-## 🧰 同一作者的其他工具
+## 更多零依赖 CLI
 
-> 作者在做一系列开源效率工具，欢迎顺手点 Star 支持：
+huanweide 还维护一系列同范式的零依赖代码体检 CLI（共 18 件单文件工具）。欢迎到 [family-showcase](https://github.com/huanweide/family-showcase) 总览，或直接使用聚合 runner [doctors](https://github.com/huanweide/doctors)。
 
-- 📚 长篇创作 — AI 小说工坊，本地规则引擎零依赖：[点此访问](https://github.com/huanweide/novel-smith)
-- 🎓 网课助手 — 智慧树自动播放/续播/AI 答题：[点此访问](https://github.com/huanweide/zhihuishu-helper)
-- 🎬 字幕/视频 — B站字幕一键提取（零 Key 取官方字幕）：[点此访问](https://github.com/huanweide/bili-subtitle-universal)
-- 📺 实时字幕 — 直播/会议实时字幕：[点此访问](https://github.com/huanweide/live-subtitle)
-- ✂️ 视频摘要 — 长视频一键总结：[点此访问](https://github.com/huanweide/video-brief)
-- 🖥️ 总览 — 作者全部开源项目集散：[点此访问](https://github.com/huanweide/family-showcase)
-- 🩺 代码健康 — 零依赖多轴静态体检：[点此访问](https://github.com/huanweide/doctors)
 ## 许可证
 
 详见 [LICENSE](LICENSE)。
@@ -174,4 +169,4 @@ MIT © huanweide
 - 离线 / 跨平台：Node 18+ 即可，不联网、不挑系统。
 - 一键跑：`node index.js --root ./src`（详见上方用法）。
 
-← [回到代码健康家族总览](https://github.com/huanweide/family-showcase)
+← [回到零依赖 CLI 系列总览](https://github.com/huanweide/family-showcase)
